@@ -13,7 +13,7 @@ import FirebaseFirestore
 
 struct sign_up_view: View {
     
-    
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var signUpProcessing = false
     @State var firstName: String = ""
     @State var lastName: String = ""
@@ -98,7 +98,7 @@ struct sign_up_view: View {
 
 struct sign_up_view_Previews: PreviewProvider {
     static var previews: some View {
-        sign_up_view()
+        sign_up_view().environmentObject(ViewRouter())
     }
 }
 

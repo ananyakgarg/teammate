@@ -12,8 +12,7 @@ import FirebaseCore
 
 
 struct sign_in_view: View {
-    
-        
+    @EnvironmentObject var viewRouter: ViewRouter
     @State  var email = ""
     @State private var password = ""
     @State var signInProcess = false

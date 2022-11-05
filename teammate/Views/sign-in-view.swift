@@ -14,7 +14,7 @@ import FirebaseCore
 
 struct sign_in_view: View {
     
-        
+    
     @State  var email = ""
     @State private var password = ""
     @State var signInProcess = false
@@ -38,7 +38,7 @@ struct sign_in_view: View {
                                 Text("Login")
                                     .foregroundColor(.white)
                                     .bold()
-                                    .frame(width: 360, height: 50)
+                                    .frame(width: 380, height: 50)
                                     .background(Color("AccentColor"))
                                     .cornerRadius(10)
                             }
@@ -52,8 +52,8 @@ struct sign_in_view: View {
                                     
                                     
                                 }
+            Spacer()
             
-                                
         }
     }
     
@@ -95,23 +95,25 @@ struct signInFields: View{
     @Binding var password: String
     
     var body: some View{
-        Group{
-            Text("Email").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading).padding()
+        VStack
+        {
+            
+            Text("Email").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+
             TextField("Email", text: $email)
                 .padding()
                 .font(.system(size:16, weight: .regular))
                 .background(Color.white)
-                .cornerRadius(10.0)
-                .border(.gray)
+                .border(.gray).cornerRadius(10.0)
             // format this however
-            Text("Password").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading).padding()
+            Text("Password").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+            
             SecureField("Password", text: $password)
                 .padding()
                 .font(.system(size:16, weight: .regular))
                 .background(Color.white)
-                .cornerRadius(10.0)
-                .border(.gray)
+                .border(.gray).cornerRadius(10.0)
             // format this however
-        }
+        }.padding()
     }
 }

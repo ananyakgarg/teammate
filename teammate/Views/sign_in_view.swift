@@ -73,7 +73,7 @@ struct sign_in_view: View {
 
 struct sign_in_view_Previews: PreviewProvider {
     static var previews: some View {
-        sign_in_view()
+        sign_in_view().environmentObject(ViewRouter())
     }
 }
 

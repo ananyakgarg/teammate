@@ -6,10 +6,26 @@
 //
 
 import SwiftUI
+import MapKit
+
 
 struct sign_in_view: View {
+    
+        
+    @State  var email = ""
+    @State private var password = ""
+    @State var signInProcess = false
+    @State var signInError = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Color(red: 0, green: 0, blue: 0)
+                        .ignoresSafeArea()
+        
+        VStack{
+                        Spacer()
+                        Text("Welcome Back!")
+                            .foregroundColor(.white)
+                            .font(.system(size: 40, weight: .bold))
     }
 }
 

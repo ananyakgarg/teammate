@@ -4,7 +4,6 @@
 //
 //  Created by Clementine on 11/5/22.
 //
-
 import SwiftUI
 import MapKit
 import Firebase
@@ -21,8 +20,6 @@ struct sign_in_view: View {
     @State var signInError = ""
     
     var body: some View {
-        Color(red: 0, green: 0, blue: 0)
-                        .ignoresSafeArea()
         
         VStack{
                         Spacer()
@@ -98,21 +95,21 @@ struct signInFields: View{
         VStack
         {
             
-            Text("Email").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+            Text("Email").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading).padding(.leading)
 
             TextField("Email", text: $email)
                 .padding()
                 .font(.system(size:16, weight: .regular))
                 .background(Color.white)
-                .border(.gray).cornerRadius(10.0)
+                .textFieldStyle(.roundedBorder)
             // format this however
-            Text("Password").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+            Text("Password").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading).padding(.leading)
             
             SecureField("Password", text: $password)
                 .padding()
                 .font(.system(size:16, weight: .regular))
                 .background(Color.white)
-                .border(.gray).cornerRadius(10.0)
+                .textFieldStyle(.roundedBorder)
             // format this however
         }.padding()
     }

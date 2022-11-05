@@ -14,7 +14,7 @@ import FirebaseCore
 
 struct sign_in_view: View {
     
-        
+    
     @State  var email = ""
     @State private var password = ""
     @State var signInProcess = false
@@ -38,13 +38,22 @@ struct sign_in_view: View {
                                 Text("Login")
                                     .foregroundColor(.white)
                                     .bold()
-                                    .frame(width: 360, height: 50)
+                                    .frame(width: 380, height: 50)
                                     .background(Color("AccentColor"))
                                     .cornerRadius(10)
                             }
                             .disabled(!signInProcess && !email.isEmpty && !password.isEmpty ? false : true)
+            Button(action: {
+                                    //viewRouter.currentPage = .signUpPage
+                                }){
+                                    Text("Don't have an account? Click here to sign up")
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 16, weight: .medium))
+                                    
+                                    
+                                }
+            Spacer()
             
-                                
         }
     }
     
@@ -86,19 +95,25 @@ struct signInFields: View{
     @Binding var password: String
     
     var body: some View{
-        Group{
+        VStack
+        {
+            
+            Text("Email").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+
             TextField("Email", text: $email)
                 .padding()
-                .font(.system(size:16, weight: .semibold))
+                .font(.system(size:16, weight: .regular))
                 .background(Color.white)
-                .cornerRadius(10.0)
+                .border(.gray).cornerRadius(10.0)
             // format this however
+            Text("Password").font(.system(size:16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+            
             SecureField("Password", text: $password)
                 .padding()
-                .font(.system(size:16, weight: .semibold))
+                .font(.system(size:16, weight: .regular))
                 .background(Color.white)
-                .cornerRadius(10.0)
+                .border(.gray).cornerRadius(10.0)
             // format this however
-        }
+        }.padding()
     }
 }

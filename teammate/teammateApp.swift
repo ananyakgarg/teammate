@@ -26,7 +26,7 @@ struct teammateApp: App {
     @StateObject var viewRouter = ViewRouter()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(ViewRouter())
         }
     }
 }

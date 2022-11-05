@@ -13,8 +13,9 @@
 		F67B49182916BE6400E4E40A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F67B49172916BE6400E4E40A /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		F67B491A2916BE6400E4E40A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F67B49192916BE6400E4E40A /* FirebaseAuth */; };
 		F67B491C2916BE6400E4E40A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F67B491B2916BE6400E4E40A /* FirebaseFirestore */; };
+		F67B491E2916C3BD00E4E40A /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67B491D2916C3BD00E4E40A /* ViewRouter.swift */; };
 		F6AF87DF2916B39200E22A98 /* teammateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87DE2916B39200E22A98 /* teammateApp.swift */; };
-		F6AF87E12916B39200E22A98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87E02916B39200E22A98 /* ContentView.swift */; };
+		F6AF87E12916B39200E22A98 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87E02916B39200E22A98 /* ParentView.swift */; };
 		F6AF87E32916B39700E22A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AF87E22916B39700E22A98 /* Assets.xcassets */; };
 		F6AF87E62916B39700E22A98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AF87E52916B39700E22A98 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -22,9 +23,10 @@
 /* Begin PBXFileReference section */
 		0491A2872916B7E900708224 /* sign-in-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sign-in-view.swift"; sourceTree = "<group>"; };
 		F67B49122916BD6D00E4E40A /* GoogleService-Info (9).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (9).plist"; sourceTree = "<group>"; };
+		F67B491D2916C3BD00E4E40A /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		F6AF87DB2916B39200E22A98 /* teammate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teammate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AF87DE2916B39200E22A98 /* teammateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teammateApp.swift; sourceTree = "<group>"; };
-		F6AF87E02916B39200E22A98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F6AF87E02916B39200E22A98 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		F6AF87E22916B39700E22A98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6AF87E52916B39700E22A98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +49,7 @@
 		0491A2822916B79400708224 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6AF87E02916B39200E22A98 /* ParentView.swift */,
 				0491A2872916B7E900708224 /* sign-in-view.swift */,
 			);
 			path = Views;
@@ -56,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F67B49122916BD6D00E4E40A /* GoogleService-Info (9).plist */,
+				F6AF87E22916B39700E22A98 /* Assets.xcassets */,
 				F6AF87DD2916B39200E22A98 /* teammate */,
 				F6AF87DC2916B39200E22A98 /* Products */,
 			);
@@ -72,10 +76,9 @@
 		F6AF87DD2916B39200E22A98 /* teammate */ = {
 			isa = PBXGroup;
 			children = (
-				F6AF87E22916B39700E22A98 /* Assets.xcassets */,
+				F67B491D2916C3BD00E4E40A /* ViewRouter.swift */,
 				F6AF87DE2916B39200E22A98 /* teammateApp.swift */,
 				0491A2822916B79400708224 /* Views */,
-				F6AF87E02916B39200E22A98 /* ContentView.swift */,
 				F6AF87E42916B39700E22A98 /* Preview Content */,
 			);
 			path = teammate;
@@ -169,9 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6AF87E12916B39200E22A98 /* ContentView.swift in Sources */,
+				F6AF87E12916B39200E22A98 /* ParentView.swift in Sources */,
 				F6AF87DF2916B39200E22A98 /* teammateApp.swift in Sources */,
 				0491A2882916B7E900708224 /* sign-in-view.swift in Sources */,
+				F67B491E2916C3BD00E4E40A /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
-import MapKit
+import SwiftUI
+import Firebase
+import FirebaseFirestore
+import FirebaseCore
+
 
 
 struct sign_in_view: View {
     
-        
+    @EnvironmentObject  var viewRouter: ViewRouter
+    
     @State  var email = ""
+    
     @State private var password = ""
+    
     @State var signInProcess = false
+    
     @State var signInError = ""
     
     var body: some View {
@@ -22,15 +30,16 @@ struct sign_in_view: View {
                         .ignoresSafeArea()
         
         VStack{
-                        Spacer()
-                        Text("Welcome Back!")
-                            .foregroundColor(.white)
-                            .font(.system(size: 40, weight: .bold))
+        Spacer()
+        Text("Welcome Back!")
+            .foregroundColor(.white)
+            .font(.system(size: 40, weight: .bold))
     }
+}
 }
 
 struct sign_in_view_Previews: PreviewProvider {
     static var previews: some View {
-        sign_in_view()
+        sign_in_view().environmentObject(ViewRouter())
     }
 }

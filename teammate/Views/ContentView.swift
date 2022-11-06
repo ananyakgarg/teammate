@@ -20,7 +20,7 @@ struct ContentView: View {
         case .inbox_view:
             inbox_view()
         case .cards_view:
-            CardsView()
+            CardView()
         case .bio_view:
             bio_view()
         case .create_a_bio_view:

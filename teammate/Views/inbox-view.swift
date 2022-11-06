@@ -27,13 +27,12 @@ struct inbox_view: View {
                                 }
 
                                 VStack(alignment: .leading){
-                                    HStack{
+                                   
                                         Button{viewRouter.currentPage = .message_view}
+                                    
                                     label:{
+                                        HStack{
                                         Text("\(item.name)").font(.system(size:24, weight: .semibold))
-
-                                    }
-                                        
                                         Spacer()
 
                                         Text("\(item.timestamp)")
@@ -43,11 +42,14 @@ struct inbox_view: View {
                                         Image(systemName: "chevron.forward")
                                             .font(.headline)
                                             .foregroundColor(.secondary)
+
+                                    }
+                                        Text("\(item.messageSummary)")
+                                            .font(.system(size:16, weight: .regular))
+                                            .foregroundColor(.secondary)
+                                        
                                     }
 
-                                    Text("\(item.messageSummary)")
-                                        .font(.system(size:16, weight: .regular))
-                                        .foregroundColor(.secondary)
                                 
                                     
                                     Spacer()

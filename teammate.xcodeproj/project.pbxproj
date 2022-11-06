@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		047E5CF929172D9300FFADE3 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5CF829172D9300FFADE3 /* MessageData.swift */; };
-		047E5CFB29172E8E00FFADE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5CFA29172E8E00FFADE3 /* GoogleService-Info.plist */; };
 		047E5CFF2917315600FFADE3 /* create-a-bio-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5CFE2917315600FFADE3 /* create-a-bio-view.swift */; };
 		0491A2882916B7E900708224 /* sign-in-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491A2872916B7E900708224 /* sign-in-view.swift */; };
 		04CDA8E92916E9A700BB7E1F /* register-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA8E82916E9A700BB7E1F /* register-view.swift */; };
@@ -29,11 +28,11 @@
 		F6AF87E12916B39200E22A98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87E02916B39200E22A98 /* ContentView.swift */; };
 		F6AF87E32916B39700E22A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AF87E22916B39700E22A98 /* Assets.xcassets */; };
 		F6AF87E62916B39700E22A98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6AF87E52916B39700E22A98 /* Preview Assets.xcassets */; };
+		F6D15AD0291761A800780628 /* cards-vew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D15ACF291761A800780628 /* cards-vew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		047E5CF829172D9300FFADE3 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
-		047E5CFA29172E8E00FFADE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		047E5CFE2917315600FFADE3 /* create-a-bio-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "create-a-bio-view.swift"; sourceTree = "<group>"; };
 		0491A2872916B7E900708224 /* sign-in-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sign-in-view.swift"; sourceTree = "<group>"; };
 		04CDA8E82916E9A700BB7E1F /* register-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "register-view.swift"; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		F6AF87E02916B39200E22A98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F6AF87E22916B39700E22A98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6AF87E52916B39700E22A98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F6D15ACF291761A800780628 /* cards-vew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "cards-vew.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +72,7 @@
 		0491A2822916B79400708224 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6D15ACE2917619400780628 /* CardView */,
 				F6AF87E02916B39200E22A98 /* ContentView.swift */,
 				0491A2872916B7E900708224 /* sign-in-view.swift */,
 				04CDA8E82916E9A700BB7E1F /* register-view.swift */,
@@ -140,6 +141,14 @@
 				F6AF87E52916B39700E22A98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F6D15ACE2917619400780628 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				F6D15ACF291761A800780628 /* cards-vew.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +237,7 @@
 				F6AF87E12916B39200E22A98 /* ContentView.swift in Sources */,
 				04CDA90E2917191500BB7E1F /* inbox-view.swift in Sources */,
 				04CDA909291715F600BB7E1F /* message-view.swift in Sources */,
+				F6D15AD0291761A800780628 /* cards-vew.swift in Sources */,
 				04CDA8FF2917141000BB7E1F /* bottomNavigationForm.swift in Sources */,
 				F6AF87DF2916B39200E22A98 /* teammateApp.swift in Sources */,
 				04CDA90C2917166F00BB7E1F /* Message.swift in Sources */,

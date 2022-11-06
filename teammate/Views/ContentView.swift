@@ -19,7 +19,8 @@ struct ContentView: View {
             message_view()
         case .inbox_view:
             inbox_view()
-        
+        case .cards_view:
+            CardsView()
         }
     }
 }

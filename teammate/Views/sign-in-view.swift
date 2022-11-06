@@ -73,7 +73,7 @@ struct sign_in_view: View {
                 case .some(_):
                     print("Welcome to the party!")
                     signInProcess = false
-                    viewRouter.currentPage = .inbox_view
+                    viewRouter.currentPage = .cards_view
                 }
             }
         }

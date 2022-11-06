@@ -18,7 +18,6 @@ struct bio_view: View {
     var body: some View {
         VStack{
             Spacer()
-            Image("logo")
             Text(firstName + " " + lastName)
     .foregroundColor(Color("AccentColor"))
                 .font(.system(size: 32, weight: .bold))

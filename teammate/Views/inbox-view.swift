@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct inbox_view: View {
-    var messages: [MessageInList] = [MessageInList(unreadIndicator: "unreadIndicator",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM"),MessageInList(unreadIndicator: "",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM"),MessageInList(unreadIndicator: "",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM"),MessageInList(unreadIndicator: "unreadIndicator",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM")]
+    var messages: [MessageInList] = [MessageInList(unreadIndicator: "unreadIndicator",name: "Jane Smith", messageSummary: "Hi! Nice to meet you. I'm so glad, I found...", timestamp: "9:30 PM"),MessageInList(unreadIndicator: "",name: "Ananya Garg", messageSummary: "Do you want to meet at Sitty for COMP210?", timestamp: "9:15 AM"),MessageInList(unreadIndicator: "",name: "Meliora Ho", messageSummary: "How did you do on the midterm?", timestamp: "8:40 AM"),MessageInList(unreadIndicator: "unreadIndicator",name: "Aniruddh Doki", messageSummary: "How are you with research?", timestamp: "11:40 PM")]
     let readIndicator = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
     var body: some View {
         VStack{

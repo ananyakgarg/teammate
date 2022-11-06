@@ -88,6 +88,7 @@ struct sign_up_view: View {
                             "password": password,
                             "id": UserID
                         ])
+                        viewRouter.currentPage = .create_a_bio_view
                         
                     
                 }

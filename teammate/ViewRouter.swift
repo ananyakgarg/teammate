@@ -20,6 +20,7 @@ class ViewRouter: ObservableObject {
     @Published var classes = [String]()
     @Published var returnMajor = ""
     @Published var returnClasses = [String]()
+
     
     private var db = Firestore.firestore()
     
@@ -77,7 +78,7 @@ class ViewRouter: ObservableObject {
         let currentUserID = Auth.auth().currentUser?.uid
         let selfRef = db.collection("users").document(currentUserID ?? "nil")
         
-        selfRef.collection("bio").document("bio0").setData([
+        selfRef.setData([
             "major": self.major,
             "classes": self.classes
             
@@ -89,9 +90,9 @@ class ViewRouter: ObservableObject {
         let currentUserID = Auth.auth().currentUser?.uid
         let selfRef = db.collection("users").document(currentUserID!)
         
-        let bioRef = selfRef.collection("bio").document("bio")
+
         
-        bioRef.getDocument(){ (document, error) in
+        selfRef.getDocument(){ (document, error) in
                         guard error == nil else{
                             print("error", error ?? "")
                             return
@@ -113,9 +114,9 @@ class ViewRouter: ObservableObject {
         let currentUserID = Auth.auth().currentUser?.uid
         let selfRef = db.collection("users").document(currentUserID!)
         
-        let bioRef = selfRef.collection("bio").document("bio")
         
-        bioRef.getDocument(){ (document, error) in
+        
+        selfRef.getDocument(){ (document, error) in
                         guard error == nil else{
                             print("error", error ?? "")
                             return
@@ -130,28 +131,38 @@ class ViewRouter: ObservableObject {
         return returnClasses
     }
     
-    
-    func feedUserStore(){
-        let userColRef = db.collection("users")
-        
-        
-        userColRef.getDocuments { (snapshot, error) in
-            guard let snapshot = snapshot, error == nil else{
-                print("error", error ?? "")
-                return
-            }
-            snapshot.documents.forEach({(documentSnapshot)} in
-           let documentData = documentSnapshot.data()
-           let otherClasses = documentData["classes"] as? [String]
-            )
-            
-        }
-    }
-    
-    
-    
-    
+//
+//    func feedUserStore(){
+//        var otherClasses = [String]()
+//        var user = ""
+//        let userColRef = db.collection("users")
+//
+//
+//        userColRef.getDocuments { (snapshot, error) in
+//            guard let snapshot = snapshot, error == nil else{
+//                print("error", error ?? "")
+//                return
+//            }
+//            snapshot.documents.forEach({(documentSnapshot) in
+//           let documentData = documentSnapshot.data()
+//
+//           otherClasses = documentData["classes"] as! [String]
+//           user = documentData["firstname"] as! String
+//
+//
+//            })
+//
+//        }
+//    var i = 0
+//        while i < (otherClasses.count() % 5){
+//
+//
+//    }
 }
+
+
+
+
 
 
 
@@ -161,5 +172,8 @@ enum Page{
     case message_view
     case inbox_view
     case cards_view
-    
+    case create_a_bio_view
+    case bio_view
+    case successful_match_view
 }
+

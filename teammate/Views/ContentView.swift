@@ -21,7 +21,16 @@ struct ContentView: View {
             inbox_view()
         case .cards_view:
             CardsView()
+        case .bio_view:
+            bio_view()
+        case .create_a_bio_view:
+            create_a_bio_view()
+        case .successful_match_view:
+            successful_match_view()
+        
+        
         }
+        
     }
 }
 

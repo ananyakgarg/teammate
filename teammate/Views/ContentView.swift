@@ -20,8 +20,18 @@ struct ContentView: View {
         case .inbox_view:
             inbox_view()
         case .cards_view:
+
+            CardView()
+        case .bio_view:
+            bio_view()
+        case .create_a_bio_view:
+            create_a_bio_view()
+        case .successful_match_view:
+            successful_match_view()
+        case .stack_view:
             stack_view()
         }
+        
     }
 }
 

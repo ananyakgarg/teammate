@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+
 struct CardView: View {
     @State private var translation: CGSize = .zero
     
@@ -125,6 +126,7 @@ struct CardView_Previews: PreviewProvider {
             })
             .frame(height: 400)
             .padding()
+
     }
 }
 

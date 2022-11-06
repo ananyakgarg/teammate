@@ -8,36 +8,35 @@
 import SwiftUI
 
 struct bio_view: View {
-    @State var firstName : String = "John"
-    @State var lastName : String = "Doe"
-    @State var major : String = "Computer Science"
-    @State var classes : [String] = ["COMP283: Discrete Structures","COMP210: Data Structures","ENGL105i: Writing in Science","HIST365: Queer History"]
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var clubs : [String] = ["HackNC","SEASA","DTH"]
-    @State var interests : [String] = ["Reading"," Coding","Baking"]
+    @State var interests : [String] = ["Reading","Coding","Baking"]
     
     var body: some View {
         VStack{
             Spacer()
-            Text(firstName + " " + lastName)
-    .foregroundColor(Color("AccentColor"))
+
+            Image("logo")
+            Text(viewRouter.getFirstName() + " " + viewRouter.getLastName())
+            .foregroundColor(Color("AccentColor"))
                 .font(.system(size: 32, weight: .bold))
-            Text(major)
+            Text(viewRouter.getMajor())
                 .font(.system(size: 24, weight: .semibold))
             VStack {
                 Text("Classes")
                     .font(.system(size: 16, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
                 HStack{
-                    Text(classes[0])
+                    Text(viewRouter.getClasses()[0])
             .frame(maxWidth: .infinity, alignment: .leading).padding().background(Color(
                 "AccentColor").opacity(0.25)).cornerRadius(10)
-                    Text(classes[1])
+                    Text(viewRouter.getClasses()[1])
             .frame(maxWidth: .infinity, alignment: .leading).padding().background(Color("AccentColor").opacity(0.25)).cornerRadius(10)
                 }
                 HStack{
-                    Text(classes[2])
+                    Text(viewRouter.getClasses()[2])
             .frame(maxWidth: .infinity, alignment: .leading).padding().background(Color("AccentColor").opacity(0.25)).cornerRadius(10)
                     
-                    Text(classes[3])
+                    Text(viewRouter.getClasses()[3])
             .frame(maxWidth: .infinity, alignment: .leading).padding().background(Color("AccentColor").opacity(0.25)).cornerRadius(10)
                 }
                 
@@ -65,6 +64,24 @@ struct bio_view: View {
                                         
                                 }
                 }
+                HStack{
+                    Button(action: {
+                    viewRouter.currentPage = .cards_view
+                    }){
+                        Text("Find my teammate")
+                            .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .medium))
+                    Button(action: {
+                    viewRouter.currentPage = .inbox_view
+                    }){
+                        Text("Chat with matches")
+                            .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .medium))
+                }
+                
+                    
+                    
+                }
                
 
             }.padding()
@@ -72,9 +89,12 @@ struct bio_view: View {
         }
     }
 }
+}
+
 
 struct bio_view_Previews: PreviewProvider {
     static var previews: some View {
-        bio_view()
+        bio_view().environmentObject(ViewRouter())
     }
 }
+

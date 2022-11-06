@@ -11,19 +11,16 @@ struct bottomNavigationForm: View {
     @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         TabView{
-            Text("").tabItem(){
-                Image(systemName: "house")
-                Text("Home")
-            }
+            
             inbox_view().tabItem(){
                 Image(systemName: "bubble.left.and.bubble.right.fill")
                 Text("Chat")
             }
-            Text("Favourites Screen").tabItem(){
+            stack_view().tabItem(){
                 Image(systemName: "figure.stand.line.dotted.figure.stand")
                 Text("Find your buddy")
             }
-            Text("Favourites Screen").tabItem(){
+            bio_view().tabItem(){
                 Image(systemName: "person.fill")
                 Text("Bio")
             }

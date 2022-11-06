@@ -14,7 +14,7 @@ struct bottomNavigationForm: View {
                 Image(systemName: "house")
                 Text("Home")
             }
-            Text("").tabItem(){
+            inbox_view().tabItem(){
                 Image(systemName: "bubble.left.and.bubble.right.fill")
                 Text("Chat")
             }

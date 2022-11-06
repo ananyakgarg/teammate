@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047E5CF929172D9300FFADE3 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5CF829172D9300FFADE3 /* MessageData.swift */; };
+		047E5CFB29172E8E00FFADE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5CFA29172E8E00FFADE3 /* GoogleService-Info.plist */; };
 		0491A2882916B7E900708224 /* sign-in-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491A2872916B7E900708224 /* sign-in-view.swift */; };
 		04CDA8E92916E9A700BB7E1F /* register-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA8E82916E9A700BB7E1F /* register-view.swift */; };
 		04CDA8FF2917141000BB7E1F /* bottomNavigationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA8FE2917141000BB7E1F /* bottomNavigationForm.swift */; };
@@ -15,7 +17,7 @@
 		04CDA9052917146A00BB7E1F /* titleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA9042917146A00BB7E1F /* titleRow.swift */; };
 		04CDA909291715F600BB7E1F /* message-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA908291715F600BB7E1F /* message-view.swift */; };
 		04CDA90C2917166F00BB7E1F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA90B2917166F00BB7E1F /* Message.swift */; };
-		F67B49132916BD6D00E4E40A /* GoogleService-Info (9).plist in Resources */ = {isa = PBXBuildFile; fileRef = F67B49122916BD6D00E4E40A /* GoogleService-Info (9).plist */; };
+		04CDA90E2917191500BB7E1F /* inbox-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA90D2917191500BB7E1F /* inbox-view.swift */; };
 		F67B49162916BE6400E4E40A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F67B49152916BE6400E4E40A /* FirebaseAnalytics */; };
 		F67B49182916BE6400E4E40A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F67B49172916BE6400E4E40A /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		F67B491A2916BE6400E4E40A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F67B49192916BE6400E4E40A /* FirebaseAuth */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047E5CF829172D9300FFADE3 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		047E5CFA29172E8E00FFADE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0491A2872916B7E900708224 /* sign-in-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sign-in-view.swift"; sourceTree = "<group>"; };
 		04CDA8E82916E9A700BB7E1F /* register-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "register-view.swift"; sourceTree = "<group>"; };
 		04CDA8FE2917141000BB7E1F /* bottomNavigationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomNavigationForm.swift; sourceTree = "<group>"; };
@@ -36,7 +40,7 @@
 		04CDA9042917146A00BB7E1F /* titleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleRow.swift; sourceTree = "<group>"; };
 		04CDA908291715F600BB7E1F /* message-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "message-view.swift"; sourceTree = "<group>"; };
 		04CDA90B2917166F00BB7E1F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		F67B49122916BD6D00E4E40A /* GoogleService-Info (9).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (9).plist"; sourceTree = "<group>"; };
+		04CDA90D2917191500BB7E1F /* inbox-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "inbox-view.swift"; sourceTree = "<group>"; };
 		F6A90F1029171227007D7911 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		F6AF87DB2916B39200E22A98 /* teammate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teammate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AF87DE2916B39200E22A98 /* teammateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teammateApp.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 				0491A2872916B7E900708224 /* sign-in-view.swift */,
 				04CDA8E82916E9A700BB7E1F /* register-view.swift */,
 				04CDA908291715F600BB7E1F /* message-view.swift */,
+				04CDA90D2917191500BB7E1F /* inbox-view.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				04CDA90B2917166F00BB7E1F /* Message.swift */,
+				047E5CF829172D9300FFADE3 /* MessageData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,7 +99,7 @@
 		F6AF87D22916B39200E22A98 = {
 			isa = PBXGroup;
 			children = (
-				F67B49122916BD6D00E4E40A /* GoogleService-Info (9).plist */,
+				047E5CFA29172E8E00FFADE3 /* GoogleService-Info.plist */,
 				F6AF87DD2916B39200E22A98 /* teammate */,
 				F6AF87DC2916B39200E22A98 /* Products */,
 			);
@@ -196,7 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F67B49132916BD6D00E4E40A /* GoogleService-Info (9).plist in Resources */,
+				047E5CFB29172E8E00FFADE3 /* GoogleService-Info.plist in Resources */,
 				F6AF87E62916B39700E22A98 /* Preview Assets.xcassets in Resources */,
 				F6AF87E32916B39700E22A98 /* Assets.xcassets in Resources */,
 			);
@@ -212,6 +218,7 @@
 				F6A90F1129171227007D7911 /* ViewRouter.swift in Sources */,
 				04CDA9012917142F00BB7E1F /* messageBubble.swift in Sources */,
 				F6AF87E12916B39200E22A98 /* ContentView.swift in Sources */,
+				04CDA90E2917191500BB7E1F /* inbox-view.swift in Sources */,
 				04CDA909291715F600BB7E1F /* message-view.swift in Sources */,
 				04CDA8FF2917141000BB7E1F /* bottomNavigationForm.swift in Sources */,
 				F6AF87DF2916B39200E22A98 /* teammateApp.swift in Sources */,
@@ -220,6 +227,7 @@
 				04CDA9032917145200BB7E1F /* messageField.swift in Sources */,
 				04CDA9052917146A00BB7E1F /* titleRow.swift in Sources */,
 				04CDA8E92916E9A700BB7E1F /* register-view.swift in Sources */,
+				047E5CF929172D9300FFADE3 /* MessageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

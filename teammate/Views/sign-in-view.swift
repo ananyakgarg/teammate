@@ -12,6 +12,7 @@ import FirebaseCore
 import FirebaseAuth
 
 
+
 struct sign_in_view: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
@@ -42,7 +43,7 @@ struct sign_in_view: View {
                             }
                             .disabled(!signInProcess && !email.isEmpty && !password.isEmpty ? false : true)
             Button(action: {
-                                    //viewRouter.currentPage = .signUpPage
+                                viewRouter.currentPage = .sign_up_view
                                 }){
                                     Text("Don't have an account? Click here to sign up")
                                         .foregroundColor(.black)
@@ -68,11 +69,11 @@ struct sign_in_view: View {
                 }
                 switch authResult{
                 case .none:
-                    print("We couldn't sign you in, try again.")
+                    signInError
                 case .some(_):
                     print("Welcome to the party!")
                     signInProcess = false
-    //                viewRouter.currentPage = .requestPage
+                    viewRouter.currentPage = .inbox_view
                 }
             }
         }

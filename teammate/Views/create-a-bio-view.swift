@@ -13,7 +13,7 @@ struct create_a_bio_view: View {
     @State var classOptions = ["Select","COMP210","COMP283","MATH233","ENGL105i","LFIT100"]
     @State var major = ""
     @State var classes = ""
-
+    var classList: [String] = []
     var body: some View {
         ScrollView{
             VStack (alignment: .leading){
@@ -28,7 +28,7 @@ struct create_a_bio_view: View {
                     Picker("Select", selection: $major) {
                         ForEach(majorOptions, id: \.self){
                             item in
-                            Text(item)
+                            Text(item).tag(item)
                         }
                     }
                     

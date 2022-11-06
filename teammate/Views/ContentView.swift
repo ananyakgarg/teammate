@@ -10,8 +10,17 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
-        Text("hello!")
-            .padding()
+        switch viewRouter.currentPage{
+        case .sign_in_view:
+            sign_in_view()
+        case .sign_up_view:
+            sign_up_view()
+        case .message_view:
+            message_view()
+        case .inbox_view:
+            inbox_view()
+        
+        }
     }
 }
 

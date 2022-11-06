@@ -131,33 +131,38 @@ class ViewRouter: ObservableObject {
         return returnClasses
     }
     
-//
-//    func feedUserStore(){
-//        var otherClasses = [String]()
-//        var user = ""
-//        let userColRef = db.collection("users")
-//
-//
-//        userColRef.getDocuments { (snapshot, error) in
-//            guard let snapshot = snapshot, error == nil else{
-//                print("error", error ?? "")
-//                return
-//            }
-//            snapshot.documents.forEach({(documentSnapshot) in
-//           let documentData = documentSnapshot.data()
-//
-//           otherClasses = documentData["classes"] as! [String]
-//           user = documentData["firstname"] as! String
-//
-//
-//            })
-//
-//        }
-//    var i = 0
-//        while i < (otherClasses.count() % 5){
-//
-//
-//    }
+  func userFeedFetch(){
+        var otherClasses = [String]()
+        var user = ""
+        let userColRef = db.collection("users")
+
+
+        userColRef.getDocuments { (snapshot, error) in
+            guard let snapshot = snapshot, error == nil else{
+                print("error", error ?? "")
+                return
+            }
+            snapshot.documents.forEach({(documentSnapshot) in
+           let documentData = documentSnapshot.data()
+
+           otherClasses = documentData["classes"] as! [String]
+           user = documentData["firstname"] as! String
+
+
+            })
+
+        }
+        var tracker = 0
+        var matchIndex = 0.0
+        for i in otherClasses{
+            tracker += 1
+            if (self.getClasses().contains(i) && tracker == 4){
+                matchIndex += 0.25
+                
+            }
+                
+            }
+        }
 }
 
 

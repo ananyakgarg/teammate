@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct create_a_bio_view: View {
-    @EnvironmentObject var viewRouter: ViewRouter
     @State var majorOptions = ["Select","Computer Science","Statistics","Mathematics","Literature","Biology"]
     @State var classOptions = ["Select","COMP210","COMP283","MATH233","ENGL105i","LFIT100"]
+    @State var interestOptions = ["Select","Competitive Programming","Painting","Baking","Reading","Wrestling"]
+    @State var clubOptions = ["Select","HackNC","UNC ACM","UNC AR/VR","Carolina Data Science","Pearl Hacks"]
     @State var major = ""
     @State var classes = ""
+    @State var interest = ""
+    @State var club = ""
 
     var body: some View {
-        ScrollView{
+        ScrollView(.vertical){
             VStack (alignment: .leading){
                 Spacer()
-                Text("Hi John, tell us more about you").foregroundColor(Color("AccentColor"))
+                Text("Hi, tell us more about you").foregroundColor(Color("AccentColor"))
                     .font(.system(size: 32, weight: .bold))
+                Spacer()
                 VStack (alignment: .leading) {
                     Text("Academics")
                         .font(.system(size: 24, weight: .semibold))
@@ -57,8 +61,7 @@ struct create_a_bio_view: View {
                         }
                        
                     }
-                    
-                    .foregroundColor(.black)
+                
                     Picker("Select", selection: $classes) {
                             ForEach(classOptions, id: \.self){
                                 item in
@@ -68,11 +71,66 @@ struct create_a_bio_view: View {
                     }
                         
                 }
-                
+                Spacer()
+                Spacer()
                 VStack (alignment: .leading){
-                    
+                    Text("Personal")
+                        .font(.system(size: 24, weight: .semibold))
+                    Text("What are your interests?")
+                        .font(.system(size: 16, weight: .semibold))
+                    Picker("Select", selection: $interest) {
+                            ForEach(interestOptions, id: \.self){
+                                item in
+                                Text(item).tag(item)
+                                
+                        }
+                    }
+                    Picker("Select", selection: $interest) {
+                            ForEach(interestOptions, id: \.self){
+                                item in
+                                Text(item).tag(item)
+                                
+                        }
+                    }
+                    Picker("Select", selection: $interest) {
+                            ForEach(interestOptions, id: \.self){
+                                item in
+                                Text(item).tag(item)
+                                
+                        }
+                    }
+                    Text("What clubs are you in?")
+                        .font(.system(size: 16, weight: .semibold))
+                    Picker("Select", selection: $club) {
+                            ForEach(clubOptions, id: \.self){
+                                item in
+                                Text(item).tag(item)
+                                
+                        }
+                    }
+                    Picker("Select", selection: $club) {
+                            ForEach(clubOptions, id: \.self){
+                                item in
+                                Text(item).tag(item)
+                                
+                        }
+                    }
+                    Picker("Select", selection: $club) {
+                            ForEach(clubOptions, id: \.self){
+                                item in
+                                Text(item).tag(item)
+                                
+                        }
+                    }
                 }
-                
+                Button(action: {}){
+                                    Text("Complete")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                        .frame(width: 380, height: 50)
+                                        .background(Color("AccentColor"))
+                                        .cornerRadius(10)
+                                }
                 
             }.padding()
         }.frame(maxWidth: .infinity)

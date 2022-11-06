@@ -27,7 +27,7 @@ struct inbox_view: View {
 
                                 VStack(alignment: .leading){
                                     HStack{
-                                        Text("\(item.name)").font(.system(size:24, weight: .semibold))
+                                        Text("\(item.name)").font(.system(size:16, weight: .semibold))
 
                                         Spacer()
 

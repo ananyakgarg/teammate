@@ -36,7 +36,7 @@ struct sign_in_view: View {
                                 Text("Login")
                                     .foregroundColor(.white)
                                     .bold()
-                                    .frame(width: 380, height: 50)
+                                    .frame(height: 50)
                                     .background(Color("AccentColor"))
                                     .cornerRadius(10)
                             }

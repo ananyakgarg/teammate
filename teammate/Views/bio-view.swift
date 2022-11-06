@@ -15,9 +15,10 @@ struct bio_view: View {
     var body: some View {
         VStack{
             Spacer()
+
             Image("logo")
             Text(viewRouter.getFirstName() + " " + viewRouter.getLastName())
-    .foregroundColor(Color("AccentColor"))
+            .foregroundColor(Color("AccentColor"))
                 .font(.system(size: 32, weight: .bold))
             Text(viewRouter.getMajor())
                 .font(.system(size: 24, weight: .semibold))

@@ -11,6 +11,7 @@
 		047E5CFF2917315600FFADE3 /* create-a-bio-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5CFE2917315600FFADE3 /* create-a-bio-view.swift */; };
 		047E5D0529175D5400FFADE3 /* bio-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5D0429175D5400FFADE3 /* bio-view.swift */; };
 		047E5D0729175DBE00FFADE3 /* successful-match-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5D0629175DBD00FFADE3 /* successful-match-view.swift */; };
+		047E5D092917837100FFADE3 /* stack-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E5D082917837100FFADE3 /* stack-view.swift */; };
 		0491A2882916B7E900708224 /* sign-in-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491A2872916B7E900708224 /* sign-in-view.swift */; };
 		04CDA8E92916E9A700BB7E1F /* register-view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA8E82916E9A700BB7E1F /* register-view.swift */; };
 		04CDA8FF2917141000BB7E1F /* bottomNavigationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDA8FE2917141000BB7E1F /* bottomNavigationForm.swift */; };
@@ -38,6 +39,7 @@
 		047E5CFE2917315600FFADE3 /* create-a-bio-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "create-a-bio-view.swift"; sourceTree = "<group>"; };
 		047E5D0429175D5400FFADE3 /* bio-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "bio-view.swift"; sourceTree = "<group>"; };
 		047E5D0629175DBD00FFADE3 /* successful-match-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "successful-match-view.swift"; sourceTree = "<group>"; };
+		047E5D082917837100FFADE3 /* stack-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "stack-view.swift"; sourceTree = "<group>"; };
 		0491A2872916B7E900708224 /* sign-in-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sign-in-view.swift"; sourceTree = "<group>"; };
 		04CDA8E82916E9A700BB7E1F /* register-view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "register-view.swift"; sourceTree = "<group>"; };
 		04CDA8FE2917141000BB7E1F /* bottomNavigationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomNavigationForm.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D15ACF291761A800780628 /* cards-vew.swift */,
+				047E5D082917837100FFADE3 /* stack-view.swift */,
 			);
 			path = CardView;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				04CDA9052917146A00BB7E1F /* titleRow.swift in Sources */,
 				04CDA8E92916E9A700BB7E1F /* register-view.swift in Sources */,
 				047E5CF929172D9300FFADE3 /* MessageData.swift in Sources */,
+				047E5D092917837100FFADE3 /* stack-view.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

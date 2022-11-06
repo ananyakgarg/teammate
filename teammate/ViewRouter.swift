@@ -75,7 +75,7 @@ class ViewRouter: ObservableObject {
     
     func setBioInfo(major: String, classes: [String]){
         let currentUserID = Auth.auth().currentUser?.uid
-        let selfRef = db.collection("users").document(currentUserID!)
+        let selfRef = db.collection("users").document(currentUserID ?? "nil")
         
         selfRef.collection("bio").document("bio0").setData([
             "major": self.major,
@@ -130,6 +130,23 @@ class ViewRouter: ObservableObject {
         return returnClasses
     }
     
+    
+    func feedUserStore(){
+        let userColRef = db.collection("users")
+        
+        
+        userColRef.getDocuments { (snapshot, error) in
+            guard let snapshot = snapshot, error == nil else{
+                print("error", error ?? "")
+                return
+            }
+            snapshot.documents.forEach({(documentSnapshot)} in
+           let documentData = documentSnapshot.data()
+           let otherClasses = documentData["classes"] as? [String]
+            )
+            
+        }
+    }
     
     
     

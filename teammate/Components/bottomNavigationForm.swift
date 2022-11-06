@@ -10,10 +10,6 @@ import SwiftUI
 struct bottomNavigationForm: View {
     var body: some View {
         TabView{
-            Text("").tabItem(){
-                Image(systemName: "house")
-                Text("Home")
-            }
             inbox_view().tabItem(){
                 Image(systemName: "bubble.left.and.bubble.right.fill")
                 Text("Chat")

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct message_view: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     
     // @StateObject var messagesManager = MessagesManager()
     
@@ -16,8 +17,13 @@ struct message_view: View {
             messageField().background(Color(.white))
             Spacer()
             
-
+        VStack{
+            
         }
+            
+            
+        }
+        
                 
     }
                 /*
@@ -29,6 +35,6 @@ struct message_view: View {
 
 struct message_view_Previews: PreviewProvider {
     static var previews: some View {
-        message_view()
+        message_view().environmentObject(ViewRouter())
     }
 }

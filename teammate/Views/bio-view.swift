@@ -10,7 +10,7 @@ import SwiftUI
 struct bio_view: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @State var clubs : [String] = ["HackNC","SEASA","DTH"]
-    @State var interests : [String] = ["Reading"," Coding","Baking"]
+    @State var interests : [String] = ["Reading","Coding","Baking"]
     
     var body: some View {
         VStack{
@@ -63,6 +63,24 @@ struct bio_view: View {
                                         
                                 }
                 }
+                HStack{
+                    Button(action: {
+                    viewRouter.currentPage = .cards_view
+                    }){
+                        Text("Find my teammate")
+                            .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .medium))
+                    Button(action: {
+                    viewRouter.currentPage = .inbox_view
+                    }){
+                        Text("Chat with matches")
+                            .foregroundColor(.black)
+                            .font(.system(size: 16, weight: .medium))
+                }
+                
+                    
+                    
+                }
                
 
             }.padding()
@@ -70,9 +88,12 @@ struct bio_view: View {
         }
     }
 }
+}
+
 
 struct bio_view_Previews: PreviewProvider {
     static var previews: some View {
         bio_view().environmentObject(ViewRouter())
     }
 }
+

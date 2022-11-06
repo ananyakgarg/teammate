@@ -11,7 +11,7 @@ struct create_a_bio_view: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @State var majorOptions = ["Select","Computer Science","Statistics","Mathematics","Literature","Biology"]
     @State var classOptions = ["Select","COMP210","COMP283","MATH233","ENGL105i","LFIT100"]
-   @State var majorCall = false
+    @State var majorCall = false
     @State var major = ""
     @State var classes = ""
     var classList: [String] = []
@@ -77,6 +77,14 @@ struct create_a_bio_view: View {
                 
                 
             }.padding()
+            Button(action: {
+                                viewRouter.currentPage = .cards_view
+                                }){
+                                    Text("Find my teammate")
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 16, weight: .medium))
+                                    
+                                }
         }.frame(maxWidth: .infinity)
         
         
@@ -85,7 +93,7 @@ struct create_a_bio_view: View {
 }
 struct create_a_bio_view_Previews: PreviewProvider {
     static var previews: some View {
-        create_a_bio_view()
+        create_a_bio_view().environmentObject(ViewRouter())
     }
 }
 

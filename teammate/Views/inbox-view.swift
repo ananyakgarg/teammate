@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct inbox_view: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var messages: [MessageInList] = [MessageInList(unreadIndicator: "unreadIndicator",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM"),MessageInList(unreadIndicator: "",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM"),MessageInList(unreadIndicator: "",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM"),MessageInList(unreadIndicator: "unreadIndicator",name: "John Doe", messageSummary: "Do you want to meet at Sitty?", timestamp: "12:40 AM")]
     let readIndicator = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
     var body: some View {
@@ -27,8 +28,12 @@ struct inbox_view: View {
 
                                 VStack(alignment: .leading){
                                     HStack{
+                                        Button{viewRouter.currentPage = .message_view}
+                                    label:{
                                         Text("\(item.name)").font(.system(size:24, weight: .semibold))
 
+                                    }
+                                        
                                         Spacer()
 
                                         Text("\(item.timestamp)")

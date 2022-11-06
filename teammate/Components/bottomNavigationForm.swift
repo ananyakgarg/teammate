@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct bottomNavigationForm: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
         TabView{
             Text("").tabItem(){
@@ -31,7 +32,7 @@ struct bottomNavigationForm: View {
 
 struct bottomNavigationForm_Previews: PreviewProvider {
     static var previews: some View {
-        bottomNavigationForm()
+        bottomNavigationForm().environmentObject(ViewRouter())
     }
 }
 }

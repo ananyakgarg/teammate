@@ -11,6 +11,7 @@ struct create_a_bio_view: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @State var majorOptions = ["Select","Computer Science","Statistics","Mathematics","Literature","Biology"]
     @State var classOptions = ["Select","COMP210","COMP283","MATH233","ENGL105i","LFIT100"]
+   @State var majorCall = false
     @State var major = ""
     @State var classes = ""
     var classList: [String] = []
@@ -25,16 +26,16 @@ struct create_a_bio_view: View {
                         .font(.system(size: 24, weight: .semibold))
                     Text("What is your major?")
                         .font(.system(size: 16, weight: .semibold))
-                    Picker("Select", selection: $major) {
+                    Picker("Select", selection: $viewRouter.major)
+                    {
                         ForEach(majorOptions, id: \.self){
                             item in
                             Text(item).tag(item)
                         }
                     }
-                    
                     Text("What classes are you taking?")
                         .font(.system(size: 16, weight: .semibold))
-                    Picker("Select", selection: $classes) {
+                    Picker("Select", selection: $viewRouter.classes[0]) {
                         ForEach(classOptions, id: \.self){
                             item in
                             Text(item).tag(item)
@@ -42,14 +43,15 @@ struct create_a_bio_view: View {
                         }
                         
                     }
-                    Picker("Select", selection: $classes) {
+                    
+                    Picker("Select", selection: $viewRouter.classes[1]) {
                         ForEach(classOptions, id: \.self){
                             item in
                             Text(item).tag(item)
                             
                         }
                     }
-                    Picker("Select", selection: $classes) {
+                    Picker("Select", selection: $viewRouter.classes[2]) {
                         ForEach(classOptions, id: \.self){
                             item in
                             Text(item).tag(item)
@@ -59,7 +61,7 @@ struct create_a_bio_view: View {
                     }
                     
                     .foregroundColor(.black)
-                    Picker("Select", selection: $classes) {
+                    Picker("Select", selection: $viewRouter.classes[3]) {
                             ForEach(classOptions, id: \.self){
                                 item in
                                 Text(item).tag(item)
@@ -81,7 +83,6 @@ struct create_a_bio_view: View {
     }
         
 }
-
 struct create_a_bio_view_Previews: PreviewProvider {
     static var previews: some View {
         create_a_bio_view()

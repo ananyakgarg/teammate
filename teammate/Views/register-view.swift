@@ -45,7 +45,7 @@ struct sign_up_view: View {
                             }
                             .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirm.isEmpty && password == passwordConfirm ? false: true)
             Button(action: {
-                                    //viewRouter.currentPage = .signUpPage
+                                    viewRouter.currentPage = .sign_in_view
                                 }){
                                     Text("Have an account? Click here to sign in")
                                         .foregroundColor(.black)
@@ -55,7 +55,6 @@ struct sign_up_view: View {
             }
             Spacer()
         }
-        
         
     }
     
@@ -80,8 +79,8 @@ struct sign_up_view: View {
                             return
                         }
                         let db = Firestore.firestore()
-                        let userDocRef = db.collection("riders")
-                        // Creates new document in the rider's database, sets the data of the riders
+                        let userDocRef = db.collection("users")
+
                         userDocRef.document(UserID).setData([
                             "name": firstname,
                             "lastname": lastname,
@@ -89,7 +88,7 @@ struct sign_up_view: View {
                             "password": password,
                             "id": UserID
                         ])
-                        // viewRouter.currentPage = .rideSchedulePage
+                        
                     
                 }
             

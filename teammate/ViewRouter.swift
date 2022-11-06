@@ -11,6 +11,7 @@ import Foundation
 
 class ViewRouter: ObservableObject {
     @Published var currentPage: Page = .sign_in_view
+    @Published var classArray = []
     
 }
 
